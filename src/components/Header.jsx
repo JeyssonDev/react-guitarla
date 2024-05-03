@@ -6,10 +6,8 @@ export const Header = ({
   increaseQuantity,
   decreaseQuantity,
   clearCart,
+  cartTotal,
 }) => {
-  const cartTotal = () =>
-    cart.reduce((total, item) => total + item.quantity * item.price, 0);
-
   return (
     <header className='py-5 header'>
       <div className='container-xl'>
@@ -116,4 +114,5 @@ Header.propTypes = {
   increaseQuantity: PropTypes.func.isRequired,
   decreaseQuantity: PropTypes.func.isRequired,
   clearCart: PropTypes.func.isRequired,
+  cartTotal: PropTypes.func.isRequired,
 };
